@@ -1,0 +1,1 @@
+SET CLASSPATH=.;C:\Users\Korisnik\Desktop\programski prevodioci\projekat\MiniC#_Parser\Projekat-programski-prevodioci\src\main\antlr4-complete.jar;%CLASSPATH%

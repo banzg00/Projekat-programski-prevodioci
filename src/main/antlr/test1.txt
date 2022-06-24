@@ -1,0 +1,22 @@
+namespace test {
+    public class Test {
+        private int a;
+        protected long b;
+        int c;
+        
+        int function1() {
+            a = 5;
+            b = 450l;
+            if (a < b) {
+                return a;
+            }else {
+                return b;
+            }
+        }
+        
+        int function2(int e) {
+            c = e;
+            c = function1();
+        }
+    }
+}

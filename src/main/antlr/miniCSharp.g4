@@ -7,10 +7,10 @@ grammar miniCSharp;
 program             : namespace
                     ;
 
-namespace           : NAMESPACE ID LBRACKET class RBRACKET
+namespace           : NAMESPACE ID LBRACKET struct RBRACKET
                     ;
 
-class               : ACCESSOR? CLASS ID LBRACKET class_body RBRACKET
+struct               : ACCESSOR? CLASS ID LBRACKET class_body RBRACKET
                     ;
 
 class_body          : attribute_list function_list
@@ -120,8 +120,8 @@ AROP                : '+' | '-' ;
 ID                  : [a-zA-Z][a-zA-Z0-9]* ;
 
 // numbers
-LONG_NUMBER         : [+-]?[0-9]{1,19}[lL] ;
-INT_NUMBER          : [+-]?[0-9]{1,10} ;
+LONG_NUMBER         : [+-]?[0-9]+[lL] ;
+INT_NUMBER          : [+-]?[0-9]+ ;
 
 // skips
 WHITESPACE          : [ \n\r\t]+ -> skip ;
