@@ -25,21 +25,23 @@ miniCSharpParser.java
  miniCSharpParser$Statement_listContext
  miniCSharpParser$VariableContext
  miniCSharpParser$Variable_listContext
-utils/Type.java
- utils.Type
+utils/Kind.java
+ utils.Kind
+utils/SymTabElement.java
+ utils.SymTabElement
 miniCSharpLexer.java
  miniCSharpLexer
 miniCSharpListener.java
  miniCSharpListener
 miniCSharpBaseListener.java
  miniCSharpBaseListener
+utils/Type.java
+ utils.Type
+utils/SymbolTable.java
+ utils.SymbolTable
+utils/Color.java
+ utils.Color
 App.java
  App
 Listener.java
  Listener
-utils/SymbolTable.java
- utils.SymbolTable
-utils/SymTabElement.java
- utils.SymTabElement
-utils/Kind.java
- utils.Kind

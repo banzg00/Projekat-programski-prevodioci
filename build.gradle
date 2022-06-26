@@ -8,6 +8,8 @@ repositories {
     jcenter()
 }
 dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
     antlr "org.antlr:antlr4:4.9.3"
     compile "org.antlr:antlr4-runtime:4.9.3"
     testImplementation(platform('org.junit:junit-bom:5.7.0'))

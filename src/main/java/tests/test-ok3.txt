@@ -1,0 +1,26 @@
+namespace test {
+    public class Test {
+        private int a;
+        protected long b;
+        long c;
+
+        long function1() {
+            a = 5;
+            b = 450l;
+            c = 12l;
+            return b + c;
+        }
+
+        int function2(int e) {
+            if (a < e)
+                return a;
+            else
+                return e;
+        }
+
+        public int Main() {
+            return 1;
+        }
+    }
+
+}
