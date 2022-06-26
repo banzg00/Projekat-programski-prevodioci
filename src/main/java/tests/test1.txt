@@ -2,21 +2,26 @@ namespace test {
     public class Test {
         private int a;
         protected long b;
-        int c;
+        long c;
         
-        int function1() {
+        long function1() {
             a = 5;
             b = 450l;
-            if (a < b) {
-                return a;
+            if (a == a) {
+                return b;
             }else {
                 return b;
             }
         }
-        
-        int function2(int e) {
+
+        int function2(long e) {
             c = e;
             c = function1();
+            return a;
+        }
+
+        public int Main() {
+            return 1;
         }
     }
 }

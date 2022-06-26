@@ -27,15 +27,15 @@ public interface miniCSharpListener extends ParseTreeListener {
 	 */
 	void exitNamespace(miniCSharpParser.NamespaceContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miniCSharpParser#struct}.
+	 * Enter a parse tree produced by {@link miniCSharpParser#class_def}.
 	 * @param ctx the parse tree
 	 */
-	void enterStruct(miniCSharpParser.StructContext ctx);
+	void enterClass_def(miniCSharpParser.Class_defContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miniCSharpParser#struct}.
+	 * Exit a parse tree produced by {@link miniCSharpParser#class_def}.
 	 * @param ctx the parse tree
 	 */
-	void exitStruct(miniCSharpParser.StructContext ctx);
+	void exitClass_def(miniCSharpParser.Class_defContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link miniCSharpParser#class_body}.
 	 * @param ctx the parse tree

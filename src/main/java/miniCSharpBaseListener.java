@@ -39,13 +39,13 @@ public class miniCSharpBaseListener implements miniCSharpListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStruct(miniCSharpParser.StructContext ctx) { }
+	@Override public void enterClass_def(miniCSharpParser.Class_defContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStruct(miniCSharpParser.StructContext ctx) { }
+	@Override public void exitClass_def(miniCSharpParser.Class_defContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

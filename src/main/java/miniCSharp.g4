@@ -7,10 +7,10 @@ grammar miniCSharp;
 program             : namespace
                     ;
 
-namespace           : NAMESPACE ID LBRACKET struct RBRACKET
+namespace           : NAMESPACE ID LBRACKET class_def RBRACKET
                     ;
 
-struct               : ACCESSOR? CLASS ID LBRACKET class_body RBRACKET
+class_def           : ACCESSOR? CLASS ID LBRACKET class_body RBRACKET
                     ;
 
 class_body          : attribute_list function_list
@@ -25,7 +25,7 @@ attribute           : ACCESSOR? TYPE ID SEMICOLON
 function_list       : function*
                     ;
 
-function            : ACCESSOR? TYPE ID LPAREN parameter* RPAREN body
+function            : ACCESSOR? TYPE ID LPAREN parameter? RPAREN body
                     ;
 
 parameter           : TYPE ID
@@ -125,7 +125,7 @@ INT_NUMBER          : [+-]?[0-9]+ ;
 
 // skips
 WHITESPACE          : [ \n\r\t]+ -> skip ;
-COMMENT             : '//'.* -> skip ;
+COMMENT             : '//' ~ [\r\n]* -> skip ;
 
 // error
 ANY                 : . ;
