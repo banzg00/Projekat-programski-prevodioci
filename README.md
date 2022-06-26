@@ -1,4 +1,4 @@
-# Projekat-programski-prevodioci
+# Kreiranje leksera i parsera za gramatiku miniC# programskog jezika
 
 Da bismo koristili ANTLR alat potrebno je da imamo sledeća 4 fajla:
   - antlr-x.y.z-complete.jar (xyz predstavlja verziju)
