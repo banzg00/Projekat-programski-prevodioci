@@ -13,6 +13,7 @@ public class Listener extends miniCSharpBaseListener {
     private SymbolTable symbolTable;
     private int varNum = 0;
     private int funIdx = -1;
+    private int classIdx = -1;
     private Map<Integer, Type> assignmentStatements;
     private Type currentExpType;
     private List<Type> expTypes;
@@ -30,6 +31,20 @@ public class Listener extends miniCSharpBaseListener {
     @Override
     public void exitProgram(miniCSharpParser.ProgramContext ctx) {
         symbolTable.clearSymTab();
+    }
+
+    @Override
+    public void enterClass_def(miniCSharpParser.Class_defContext ctx) {
+        classIdx = symbolTable.lookupSymbol(ctx.ID().getText(), CLASS);
+        if (classIdx == -1) {
+            classIdx = symbolTable.insertSymbol(ctx.ID().getText(), CLASS, Type.NO_TYPE, NO_ATR, NO_ATR);
+        } else
+            System.err.printf("Redefinition of class '%s'\n", ctx.ID().getText());
+    }
+
+    @Override
+    public void exitClass_def(miniCSharpParser.Class_defContext ctx) {
+        symbolTable.clearSymbols(classIdx + 1);
     }
 
     @Override
@@ -68,7 +83,7 @@ public class Listener extends miniCSharpBaseListener {
     }
 
     @Override
-    public void exitBody(miniCSharpParser.BodyContext ctx) {
+    public void exitFunction_body(miniCSharpParser.Function_bodyContext ctx) {
         symbolTable.clearSymbols(funIdx + 1);
         varNum = 0;
     }

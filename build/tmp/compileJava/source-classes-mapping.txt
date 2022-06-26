@@ -4,12 +4,12 @@ miniCSharpParser.java
  miniCSharpParser$Assignment_statementContext
  miniCSharpParser$AttributeContext
  miniCSharpParser$Attribute_listContext
- miniCSharpParser$BodyContext
  miniCSharpParser$Class_bodyContext
  miniCSharpParser$Class_defContext
  miniCSharpParser$Compound_statementContext
  miniCSharpParser$ExpContext
  miniCSharpParser$FunctionContext
+ miniCSharpParser$Function_bodyContext
  miniCSharpParser$Function_callContext
  miniCSharpParser$Function_listContext
  miniCSharpParser$If_partContext
@@ -25,21 +25,21 @@ miniCSharpParser.java
  miniCSharpParser$Statement_listContext
  miniCSharpParser$VariableContext
  miniCSharpParser$Variable_listContext
-utils/Kind.java
- utils.Kind
+utils/Type.java
+ utils.Type
 miniCSharpLexer.java
  miniCSharpLexer
 miniCSharpListener.java
  miniCSharpListener
 miniCSharpBaseListener.java
  miniCSharpBaseListener
-utils/Type.java
- utils.Type
-utils/SymbolTable.java
- utils.SymbolTable
-utils/SymTabElement.java
- utils.SymTabElement
 App.java
  App
 Listener.java
  Listener
+utils/SymbolTable.java
+ utils.SymbolTable
+utils/SymTabElement.java
+ utils.SymTabElement
+utils/Kind.java
+ utils.Kind

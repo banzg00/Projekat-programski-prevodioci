@@ -97,15 +97,15 @@ public interface miniCSharpListener extends ParseTreeListener {
 	 */
 	void exitParameter(miniCSharpParser.ParameterContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miniCSharpParser#body}.
+	 * Enter a parse tree produced by {@link miniCSharpParser#function_body}.
 	 * @param ctx the parse tree
 	 */
-	void enterBody(miniCSharpParser.BodyContext ctx);
+	void enterFunction_body(miniCSharpParser.Function_bodyContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miniCSharpParser#body}.
+	 * Exit a parse tree produced by {@link miniCSharpParser#function_body}.
 	 * @param ctx the parse tree
 	 */
-	void exitBody(miniCSharpParser.BodyContext ctx);
+	void exitFunction_body(miniCSharpParser.Function_bodyContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link miniCSharpParser#variable_list}.
 	 * @param ctx the parse tree

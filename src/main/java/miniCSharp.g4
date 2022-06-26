@@ -7,7 +7,7 @@ grammar miniCSharp;
 program             : namespace
                     ;
 
-namespace           : NAMESPACE ID LBRACKET class_def RBRACKET
+namespace           : NAMESPACE ID LBRACKET class_def* RBRACKET
                     ;
 
 class_def           : ACCESSOR? CLASS ID LBRACKET class_body RBRACKET
@@ -25,13 +25,13 @@ attribute           : ACCESSOR? TYPE ID SEMICOLON
 function_list       : function*
                     ;
 
-function            : ACCESSOR? TYPE ID LPAREN parameter? RPAREN body
+function            : ACCESSOR? TYPE ID LPAREN parameter? RPAREN function_body
                     ;
 
 parameter           : TYPE ID
                     ;
 
-body                : LBRACKET variable_list statement_list RBRACKET
+function_body       : LBRACKET variable_list statement_list RBRACKET
                     ;
 
 variable_list       : variable*

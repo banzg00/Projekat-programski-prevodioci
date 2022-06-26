@@ -123,13 +123,13 @@ public class miniCSharpBaseListener implements miniCSharpListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBody(miniCSharpParser.BodyContext ctx) { }
+	@Override public void enterFunction_body(miniCSharpParser.Function_bodyContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBody(miniCSharpParser.BodyContext ctx) { }
+	@Override public void exitFunction_body(miniCSharpParser.Function_bodyContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

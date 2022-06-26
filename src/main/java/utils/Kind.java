@@ -6,5 +6,6 @@ public enum Kind {
     LIT,
     FUN,
     VAR,
-    PAR
+    PAR,
+    CLASS
 }
